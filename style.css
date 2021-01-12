@@ -91,6 +91,31 @@ a{
 }
 /* End Service Section */
 
+
+/* project section */
+
+.header{
+    display: block;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+.header span{
+    color:red;
+}
+.cardsContainer{
+display: flex;
+padding: 50px;
+
+}
+.cardItem{
+    display: inline-block;
+}
+.photo{
+    display: inline-block;
+}
+/* End project section */
+
 /*  KeyFrames  */
 @keyframes text_reveal_box{
     50%{
