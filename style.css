@@ -20,6 +20,12 @@ html {
 a {
   text-decoration: none;
 }
+p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  text-align: left;
+}
 .section-title {
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -73,7 +79,7 @@ img {
   animation-delay: 1s;
 }
 
-#hero .cta {
+.cta {
   display: inline-block;
   padding: 10px 30px;
   font-size: 2rem;
@@ -88,7 +94,6 @@ img {
 
 #hero .cta:hover {
   background-color: crimson;
-  color: white;
 }
 /*   End hero Section */
 
@@ -102,11 +107,9 @@ img {
   padding: 100px 0;
 }
 #services .service-top p {
-  font-size: 1.4rem;
   margin-top: 5px;
   line-height: 2.5rem;
   letter-spacing: 0.05rem;
-  font-weight: 300;
 }
 #services .service-bottom {
   display: flex;
@@ -152,51 +155,177 @@ img {
   text-transform: uppercase;
 }
 #services .service-item p {
-  font-weight: 300;
-  font-size: 1.4rem;
-  line-height: 1.9rem;
   color: white;
-  text-align: left;
 }
 /* End Service Section */
 
 /* project section */
-
-.header {
-  display: block;
-
-  text-align: center;
+#projects .projects {
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 120px;
+  margin-top: 100px;
 }
-
-.flex-container {
+#projects .projects-header h1 {
+  margin-bottom: 50px;
+}
+#projects .all-projects {
   display: flex;
-  background-color: blue;
-  justify-content: center;
   align-items: center;
-}
-.flex-item {
-  background-color: chocolate;
-  margin: 10px;
+  justify-content: center;
+  flex-direction: column;
   width: 80%;
-  border-radius: 5px;
 }
-.description {
-  padding: 10px;
+#projects .cardItem {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px auto;
+  border-radius: 10px;
 }
-
-.photo img {
+#projects .info {
+  padding: 30px;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#projects .info h1 {
+  font-size: 4rem;
+  font-weight: 400; /*how bold is the font*/
+}
+#projects .info h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+#projects .info p {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  text-align: left;
+}
+#projects .photo img {
+  max-height: 300px;
+  flex-basis: 50%;
+  overflow: hidden;
+}
+#projects .photo {
+  position: relative;
+  transition: 0.3s ease transform;
+}
+#projects .photo:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.7;
 }
-@media (max-width: 500px) {
-  .flex-item {
-    width: 100%;
-  }
-  .flex-container {
-    flex-wrap: wrap;
-  }
+#projects .cardItem:hover .photo {
+  transform: scale(1.1);
 }
 /* End project section */
-
+/*************************************************************/
+/* About Me Section */
+#about .about {
+  flex-direction: column;
+  padding: 10px;
+}
+#about .col-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#about .col-right .cta {
+  color: crimson;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: 900;
+}
+#about .col-right h2 {
+  font-size: 1.5rem;
+  font-weight: 1000;
+  letter-spacing: 0.2rem;
+  margin-bottom: 10px;
+}
+#about .col-right p {
+  text-align: left;
+  padding: 0 15px;
+}
+#about .col-left .about-img {
+  width: 200px;
+  height: 260px;
+  margin: 0 auto;
+  border-radius: 5px;
+  position: relative;
+  border: solid 4px white;
+}
+#about .col-left .about-img::after {
+  content: ' ';
+  left: -33px;
+  top: 19px;
+  position: absolute;
+  z-index: -1;
+  border: solid 4px crimson;
+  height: 98%;
+  width: 98%;
+}
+#about .about-img img {
+  height: 100%;
+  width: 100%;
+}
+/* End About Me Section */
+/* contact Section */
+#contact .contact {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+#contact .cards {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+#contact .card {
+  margin-bottom: 30px;
+  border-radius: 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 18px 0 lightslategrey;
+}
+#contact .card .icon {
+  width: 50px;
+}
+#contact .card h1 {
+  font-size: 2rem;
+  font-weight: 1200;
+  margin-bottom: 10px;
+}
+#contact .card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+/* End contact Section */
 /*  KeyFrames  */
 @keyframes text_reveal_box {
   50% {
